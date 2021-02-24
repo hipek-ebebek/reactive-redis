@@ -20,7 +20,7 @@ public class CartItem implements Serializable {
     }
 
     public void decrement() {
-        if(count > 1)
+        if(count > 0)
             count--;
     }
 }

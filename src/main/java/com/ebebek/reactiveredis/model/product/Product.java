@@ -1,11 +1,10 @@
 package com.ebebek.reactiveredis.model.product;
 
-import com.ebebek.reactiveredis.model.BaseModel;
+import com.ebebek.reactiveredis.model.base.BaseModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
