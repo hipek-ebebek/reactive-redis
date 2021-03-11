@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,5 +19,12 @@ public class Cart extends BaseModel {
 
     public void refresh() {
         cartItemList.removeAll(cartItemList.stream().filter(e -> e.getCount() == 0).collect(Collectors.toList()));
+    }
+
+    public void addCartItem(CartItem item) {
+        if(cartItemList == null) {
+            cartItemList = new ArrayList<>();
+        }
+        cartItemList.add(item);
     }
 }
